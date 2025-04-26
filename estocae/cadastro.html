@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estocaê - Cadastro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+     <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+
+     <!--FONTE LOGO-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cadastro-container">
+        
+        <!-- LADO ESQUERDO -->
+        <div class="image-side">
+           <img src="img/img-cadastro.png">
+        </div>
+        
+
+        <!-- LADO DIREITO -->
+        <div class="form-side">
+            <div class="form-header">
+                <h1 class="form-title">Crie sua conta</h1>
+                <p class="form-subtitle">Preencha os campos abaixo para se registrar</p>
+            </div>
+            
+            <!-- FORMULÁRIO CADASTRO -->
+            <div class="form-body">
+                <form id="cadastroForm">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <input type="text" id="nome" placeholder="Nome" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="sobrenome" placeholder="Sobrenome" required>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder="seu@email.com" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="text" id="empresa" placeholder="Empresa" required>
+                    </div>
+                    
+                    <div class="input-group password-field">
+                        <input type="password" id="senha" placeholder="Senha" required>
+                    </div>
+                    
+                    <div class="password-requirements">
+                        <div class="requirement">
+                            <i class="far fa-circle"></i> Mínimo de 8 caracteres
+                        </div>
+                        <div class="requirement">
+                            <i class="far fa-circle"></i> Letras e números
+                        </div>
+                    </div>
+                    
+                    <div class="input-group password-field">
+                        <input type="password" id="confirmacao" placeholder="Confirmação" required>
+                    </div>
+                    
+                    <div class="terms">
+                        <input type="checkbox" id="termos" required>
+                        <label for="termos">Eu li e concordo com os <a href="#">Termos de Serviço</a> e <a href="#">Política de Privacidade</a></label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Criar conta</button>
+                </form>
+                
+                <div class="login-link">
+                    Já possui uma conta? <a href="login.html">Faça login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/cadastro.js"></script>
+</body>
+</html>

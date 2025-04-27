@@ -211,20 +211,25 @@ body {
     text-decoration: underline;
 }
 
+/* Responsivo */
+
 @media (max-width: 768px) {
     .cadastro-container {
         flex-direction: column;
-        max-width: 500px;
+        max-width: 90%; /* Em vez de 500px fixos */
+        width: 90%;     /* Para ocupar 90% da largura da tela */
     }
-    
+
     .image-side {
-        padding: 25px 20px;
+        display: none;
     }
-    
+
     .form-side {
-        padding: 30px 25px;
+        padding: 40px 30px; /* Deixar o formulário mais espaçoso */
+        flex: none;
+        width: 100%;
     }
-    
+
     .form-row {
         flex-direction: column;
         gap: 0;
@@ -233,10 +238,19 @@ body {
 
 @media (max-width: 480px) {
     .cadastro-container {
-        max-width: 100%;
+        max-width: 95%; /* ainda maior no celular */
+        width: 95%;
     }
-    
+
     .form-side {
-        padding: 25px 20px;
+        padding: 30px 20px;
+    }
+
+    .btn-primary {
+        margin-bottom: 10px;
+    }
+
+    .login-link {
+        margin-top: 0;
     }
 }

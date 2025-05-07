@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Controle de Estoque</title>
+
+  <!--FAVICON-->
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+
+  <!--FONTE LOGO-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- ICONES GOOGLE-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+  <!-- FONTE TEXTO -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/sidebar.css">
+  <link rel="stylesheet" href="./css/tabela.css">
+  <link rel="stylesheet" href="./css/cards.css">
+  <link rel="stylesheet" href="./css/icon.css">
+
+  <!-- Ícones do FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside class="barra-lateral">
+    <div class="logo-sistema">
+      <img src="statics/logo.svg" alt="">
+      <span class="logo-text">Estocaê</span>
+    </div>
+
+    <hr class="divisor">
+
+    <nav class="menu">
+      <h2 class="titulo-secao">Menu Principal</h2>
+      <ul>
+        <li><a href="inicial.html"><span class="material-symbols-rounded sidebar">home</span>Dashboard</a></li>
+        <li class="selecionado"><a href="produtos.html"><span
+              class="material-symbols-rounded sidebar">orders</span>Produtos</a></li>
+        <li><a href="estoque.html"><span class="material-symbols-rounded sidebar">garage_door</span>Estoque</a></li>
+        <li><a href="fornecedores.html"><span
+              class="material-symbols-rounded sidebar">local_shipping</span>Fornecedores</a></li>
+        <li><a href="movimentacoes.html"><span
+              class="material-symbols-rounded sidebar">request_page</span>Movimentações</a></li>
+      </ul>
+
+      <h2 class="titulo-secao">Configurações</h2>
+      <ul>
+        <li><a href="sistema.html"><span class="material-symbols-rounded sidebar">settings</span>Sistema</a></li>
+        <li><a href="usuarios.html"><span class="material-symbols-rounded sidebar">groups</span>Usuários</a></li>
+      </ul>
+    </nav>
+
+    <hr class="divisor">
+
+    <!-- Perfil do usuário -->
+    <div class="perfil-usuario">
+      <img src="./img/usuario.png" alt="Foto do Usuário">
+      <div class="informacoes-usuario">
+        <p class="nome-usuario">Juliana Albuquerque</p>
+        <p class="cargo-usuario">Admin</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Área principal -->
+  <main class="conteudo-principal">
+
+    <!-- Topbar -->
+    <header class="topo">
+      <div class="titulo-topo">
+        <p>Produtos</p>
+      </div>
+      <div class="area-pesquisa">
+        <img src="./statics/icon-search.svg">
+        <input type="text" placeholder="Pesquisar em produtos...">
+      </div>
+      <div class="area-notificacao">
+        <span class="material-symbols-rounded sidebar">notifications</span>
+      </div>
+    </header>
+
+    <!-- CARDS -->
+    <section class="container-cards">
+      <div class="card">
+        <div class="texto">
+          <h4>Total de Produtos</h4>
+          <p class="quantidade">0</p>
+        </div>
+        <div class="icone azul">
+          <span class="material-symbols-rounded">package_2</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="texto">
+          <h4>Produtos Ativos</h4>
+          <p class="quantidade">0</p>
+        </div>
+        <div class="icone verde">
+          <span class="material-symbols-rounded">check_circle</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="texto">
+          <h4>Produtos Inativos</h4>
+          <p class="quantidade">R$ 0</p>
+        </div>
+        <div class="icone vermelho">
+          <span class="material-symbols-rounded">cancel</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="texto">
+          <h4>Fora de Estoque</h4>
+          <p class="quantidade">0</p>
+        </div>
+        <div class="icone amarelo">
+          <span class="material-symbols-rounded">warning</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEXTO COM BOTÕES -->
+    <section class="cabecalho-inventario">
+      <div class="texto-inventario">
+        <h2 class="titulo-inventario">Inventário de produtos</h2>
+        <p class="descricao-inventario">Gerencie seus itens de estoque e níveis de inventário</p>
+      </div>
+      <div class="botoes-inventario">
+        <button class="botao-secundario">
+          <span class="material-symbols-rounded">upload_file</span>
+          Importar
+        </button>
+        <button class="botao-secundario">
+          <span class="material-symbols-rounded">file_export</span>
+          Exportar
+        </button>
+        <button class="botao-principal">
+          Adicionar Produto
+        </button>
+      </div>
+    </section>
+
+    <!-- TABELA -->
+    <section class="container-tabela">
+      <table class="tabela-produtos">
+        <thead>
+          <tr>
+            <th>PRODUTO</th>
+            <th>CÓDIGO</th>
+            <th>DESCRIÇÃO</th>
+            <th>FORNECEDOR</th>
+            <th>CATEGORIA</th>
+            <th>VALOR</th>
+            <th>STATUS</th>
+            <th>AÇÃO</th>
+          </tr>
+        </thead>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/sidebar.js"></script>
+</body>
+
+</html>

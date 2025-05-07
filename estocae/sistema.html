@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema</title>
+
+    <!--FAVICON-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+
+    <!--FONTE LOGO-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- ICONES GOOGLE-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+    <!-- FONTE TEXTO -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="./css/sistema.css">
+    <link rel="stylesheet" href="./css/icon.css">
+
+    <!-- Ícones do FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside class="barra-lateral">
+    <div class="logo-sistema">
+      <img src="statics/logo.svg" alt="">
+      <span class="logo-text">Estocaê</span>
+    </div>
+
+    <hr class="divisor">
+
+    <nav class="menu">
+      <h2 class="titulo-secao">Menu Principal</h2>
+      <ul>
+        <li><a href="inicial.html"><span class="material-symbols-rounded sidebar">home</span>Dashboard</a></li>
+        <li><a href="produtos.html"><span class="material-symbols-rounded sidebar">orders</span>Produtos</a></li>
+        <li><a href="estoque.html"><span class="material-symbols-rounded sidebar">garage_door</span>Estoque</a></li>
+        <li><a href="fornecedores.html"><span class="material-symbols-rounded sidebar">local_shipping</span>Fornecedores</a></li>
+        <li><a href="movimentacoes.html"><span class="material-symbols-rounded sidebar">request_page</span>Movimentações</a></li>
+      </ul>
+
+      <h2 class="titulo-secao">Configurações</h2>
+      <ul>
+        <li class="selecionado"><a href="sistema.html"><span class="material-symbols-rounded sidebar">settings</span>Sistema</a></li>
+        <li><a href="usuarios.html"><span class="material-symbols-rounded sidebar">groups</span>Usuários</a></li>
+      </ul>
+    </nav>
+
+    <hr class="divisor">
+
+    <!-- Perfil do usuário -->
+    <div class="perfil-usuario">
+      <img src="./img/usuario.png" alt="Foto do Usuário">
+      <div class="informacoes-usuario">
+        <p class="nome-usuario">Juliana Albuquerque</p>
+        <p class="cargo-usuario">Admin</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Área principal -->
+  <main class="conteudo-principal">
+
+    <!-- Topbar -->
+    <header class="topo">
+      <div class="titulo-topo">
+        <p>Configurações</p>
+      </div>
+      <div class="area-pesquisa">
+        <img src="./statics/icon-search.svg">
+        <input type="text" placeholder="Pesquisar...">
+      </div>
+      <div class="area-notificacao">
+        <span class="material-symbols-rounded sidebar">notifications</span>
+      </div>
+    </header>
+
+        <!-- CONTEÚDO DA PÁGINA -->
+        <div class="conteiner">
+            <section class="esquerda">
+
+                <!-- CONFIGURAÇÕES DO SISTEMA -->
+                <div class="cartao">
+                    <h2><span class="material-symbols-rounded laranja">settings_alert</span>Configurações do Sistema</h2>
+                    <hr class="divisor">
+                    <div class="grade-2">
+                        <div class="campo">
+                            <label>Nome da Empresa</label>
+                            <input type="text" placeholder="Juliana Materiais Ltda">
+                        </div>
+                        <div class="campo">
+                            <label>Moeda Padrão</label>
+                            <select>
+                                <option selected>Real Brasileiro (R$)</option>
+                                <option>Dólar Americano (US$)</option>
+                                <option>Euro (€)</option>
+                                <option>Libra Esterlina (£)</option>
+                                <option>Iene Japonês (¥)</option>
+                                <option>Franco Suíço (CHF)</option>
+                                <option>Dólar Canadense (CA$)</option>
+                                <option>Yuan Chinês (¥)</option>
+                                <option>Pesos Argentinos (AR$)</option>
+                                <option>Rupia Indiana (₹)</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label>Fuso Horário</label>
+                            <select>
+                                <option value="America/Sao_Paulo" selected>(UTC-03:00) Brasília</option>
+                                <option value="America/Argentina/Buenos_Aires">(UTC-03:00) Buenos Aires</option>
+                                <option value="America/New_York">(UTC-04:00) Nova York</option>
+                                <option value="America/Chicago">(UTC-05:00) Chicago</option>
+                                <option value="America/Denver">(UTC-06:00) Denver</option>
+                                <option value="America/Los_Angeles">(UTC-07:00) Los Angeles</option>
+                                <option value="Europe/Lisbon">(UTC+01:00) Lisboa</option>
+                                <option value="Europe/London">(UTC+01:00) Londres</option>
+                                <option value="Europe/Berlin">(UTC+02:00) Berlim</option>
+                                <option value="Europe/Moscow">(UTC+03:00) Moscou</option>
+                                <option value="Asia/Dubai">(UTC+04:00) Dubai</option>
+                                <option value="Asia/Kolkata">(UTC+05:30) Índia</option>
+                                <option value="Asia/Tokyo">(UTC+09:00) Tóquio</option>
+                                <option value="Australia/Sydney">(UTC+10:00) Sydney</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label>Formato de Data</label>
+                            <select>
+                                <option>dd/mm/yyyy</option>
+                                <option>mm/dd/yyyy</option>
+                                <option>yyyy/mm/dd</option>
+                            </select>
+                        </div>
+                        <div class="campo completo">
+                            <label>Fuso Horário</label>
+                            <input type="text" placeholder="Rua Aleatória, Nº 9 - Cidade/PE">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONFIGURAÇÕES DO ESTOQUE -->
+                <div class="cartao">
+                    <h2><span class="material-symbols-rounded laranja">package_2</span>Configurações do Estoque</h2>
+                    <hr class="divisor">
+                    <div class="linha-toggle">
+                        <div class="texto">
+                            <h3>Alertas de Estoque Baixo</h3>
+                            <p>Ativar notificações quando produtos atingirem níveis mínimos</p>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" id="toggleNotificacoes" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="grade-2">
+                        <div class="campo espaco">
+                            <label>Nível Mínimo Padrão</label>
+                            <input type="number" value="5">
+                        </div>
+                        <div class="campo">
+                            <label>Unidade de Medida Padrão</label>
+                            <select>
+                                <option>Unidades</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="linha-toggle">
+                        <div class="texto">
+                            <h3>Permitir Estoque Negativo</h3>
+                            <p>Permitir vendas mesmo quando não há estoque disponível</p>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" id="toggleNotificacoes">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="linha-toggle">
+                        <div class="texto">
+                            <h3>Ativar Validade de Produtos</h3>
+                            <p>Controlar data de validade dos produtos</p>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" id="toggleNotificacoes">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="linha-toggle">
+                        <div class="texto">
+                            <h3>Ativar Controle de Lotes</h3>
+                            <p>Rastrear produtos por números de lote ou série</p>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" id="toggleNotificacoes" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- NOTIFICAÇÕES POR E-MAIL -->
+                <div class="cartao">
+                    <h2><span class="material-symbols-rounded laranja">mail</span>Notificações por E-mail</h2>
+                    <hr class="divisor">
+                    <div class="linha-toggle">
+                        <div class="texto">
+                            <h3>Alertas de Estoque Baixo</h3>
+                            <p>Ativar notificações quando produtos atingirem níveis mínimos</p>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" id="toggleNotificacoes">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="campo espaco">
+                        <label for="email">E-mails para Notificação</label>
+                        <div class="container-input">
+                            <input type="email" id="email" class="campo-email" placeholder="Adicionar e-mail">
+                            <button class="botao-adicionar" onclick="adicionarEmail()">+</button>
+                        </div>
+                        <div id="lista-emails" class="lista-emails"></div>
+                    </div>
+                    <div class="linha-toggle">
+                        <div class="texto">
+                            <h3>Notificar Movimentações Críticas</h3>
+                            <p>Enviar e-mail para grandes movimentações de estoque</p>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" id="toggleNotificacoes">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="direita">
+                <aside>
+                    <!-- PERFIL DO USUÁRIO -->
+                    <section class="cartao">
+                        <h2><span class="material-symbols-rounded laranja">account_circle</span>Perfil do Usuário</h2>
+                        <hr class="divisor">
+                        <div class="perfil">
+                            <img src="./img/usuario.png" alt="Foto do Usuário">
+                            <strong>Juliana Albuquerque</strong>
+                            <span>juliana@email.com</span>
+                        </div>
+
+                        <div class="grade-2">
+                            <div class="campo espaco">
+                                <label>Nome</label>
+                                <input type="text" placeholder="Juliana">
+                            </div>
+                            <div class="campo">
+                                <label>Sobrenome</label>
+                                <input type="text" placeholder="Albuquerque">
+                            </div>
+                        </div>
+                        <div class="campo espaco">
+                            <label>E-mail</label>
+                            <input type="email" placeholder="Juliana Materiais Ltda">
+                        </div>
+                        <div class="campo espaco">
+                            <label>Senha</label>
+                            <input type="password" value="senha" placeholder="Juliana Materiais Ltda">
+                        </div>
+                        <div class="campo espaco">
+                            <label>Nível de Acesso</label>
+                            <select>
+                                <option>Administrador</option>
+                            </select>
+                        </div>
+                    </section>
+                    
+                    <!-- INFORMAÇÕES DO SISTEMA -->
+                    <section class="cartao">
+                        <h2><span class="material-symbols-rounded laranja">error</span>Informações do Sistema</h2>
+                        <hr class="divisor">
+                        <div class="campo espaco">
+                            <label>Versão</label>
+                            <input type="password" placeholder="Estocaê v1.0.0" disabled>
+                        </div>
+                        <div class="campo espaco">
+                            <label>Última Atualização</label>
+                            <input type="password" placeholder="29/04/2025  15:35" disabled>
+                        </div>
+                        <div class="campo espaco">
+                            <label>Licença</label>
+                            <input type="password" placeholder="Licença Empresarial (Válida até 29/05/2026)" disabled>
+                        </div>
+                        <div class="campo espaco">
+                            <label>Licença</label>
+                            <div class="status atualizado"><span class="material-symbols-rounded">check_circle</span>Sistema Atualizado
+                            </div>
+                        </div>
+                        <div class="campo espaco">
+                            <label>Último Backup</label>
+                            <input type="password" placeholder="29/05/2026 15:30" disabled>
+                        </div>
+                        <button class="botao-backup"><span class="material-symbols-rounded">save</span>Fazer Backup Agora</button>
+                    </section>
+                </aside>
+            </section>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="./js/sistema.js"></script>
+</body>
+
+</html>

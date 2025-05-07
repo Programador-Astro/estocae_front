@@ -1,0 +1,297 @@
+body {
+    margin: 30px;
+}
+
+.conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.esquerda {
+    width: 60%;
+}
+
+.direita {
+    width: 38%;
+}
+
+.cartao {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    flex: 1 1 58%;
+    min-width: 480px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #1E1E1E;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.grade-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.espaco {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.campo input::placeholder {
+    color: #333333;
+}
+
+.campo input,
+.campo select {
+    padding: 0.75rem;
+    border: 1px solid #D1D5DB;
+    color: #333333;
+    border-radius: 8px;
+    font-size: 0.938rem;
+}
+
+.campo input:focus {
+    border: 1px solid #9CA3AF;
+    outline: none;
+}
+
+.completo {
+    grid-column: span 2;
+}
+
+.secao-toggle {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.secao-toggle label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lista-emails {
+    margin-top: 0.5rem;
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.lista-emails li::before {
+    content: "• ";
+    color: #666;
+}
+
+.perfil {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.perfil img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.perfil strong {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.perfil span {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.grupo-campos input,
+.grupo-campos select {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.status {
+    padding: 0.75rem;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.status img {
+    margin-right: 7px;
+}
+
+.atualizado {
+    background-color: #d9fdd3;
+    color: #1e7e34;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.botao-backup {
+    background-color: #092C4C;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-backup img {
+    margin-right: 7px;
+}
+
+.linha-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.texto h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1E1E1E;
+}
+
+.texto p {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: #828282;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 23px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #BDBDBD;
+    border-radius: 24px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked+.slider {
+    background-color: #F2994A;
+}
+
+input:checked+.slider::before {
+    transform: translateX(22px);
+}
+
+
+/* Add e-mails */
+
+.container-input {
+    display: flex;
+    gap: 8px;
+}
+
+.campo-email {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 8px;
+}
+
+.botao-adicionar {
+    background-color: #F2994A;
+    border: none;
+    border-radius: 8px;
+    padding: 0 16px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.lista-emails {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    
+}
+
+.item-email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5F9FF;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    font-size: 16px;
+    color: #828282;
+}
+
+.botao-remover {
+    background: none;
+    border: none;
+    color: #828282;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.botao-remover:hover {
+    color: #EB5757;
+}

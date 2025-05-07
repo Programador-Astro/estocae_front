@@ -1,0 +1,59 @@
+.conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #1E1E1E;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    width: 45rem;
+    margin-bottom: 25px;
+}
+
+.campo label {
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.campo input::placeholder {
+    color: #9CA3AF;
+}
+
+.campo input,
+.campo select {
+    padding: 0.75rem;
+    border: 1px solid #D1D5DB;
+    color: #333333;
+    border-radius: 8px;
+    font-size: 0.938rem;
+}
+
+.campo input:focus {
+    border: 1px solid #9CA3AF;
+    outline: none;
+}
+
+.metade {
+    display: flex;;
+    justify-content: space-between;
+}
+
+.metade .campo {
+    width: 22rem;
+}
